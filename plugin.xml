@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-liveactivity" version="1.0.0">
+    <name>cordova-plugin-liveactivity</name>
+    <js-module name="LiveActivity" src="www/liveActivity.js">
+        <clobbers target="LiveActivity" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="LiveActivity">
+                <param name="ios-package" value="LiveActivity"/>
+            </feature>
+        </config-file>
+        <config-file target="*-Info.plist" parent="NSSupportsLiveActivities">
+            <true/>
+        </config-file>
+        <config-file target="*-Info.plist" parent="NSSupportsLiveActivitiesFrequentUpdates">
+            <true/>
+        </config-file>
+        <header-file src="src/ios/LiveActivity.h" />
+        <source-file src="src/ios/LiveActivity.m" />
+        <source-file src="src/ios/LiveActivity.swift" target-dir="." />
+        <framework src="WidgetKit.framework" />
+        <framework src="SwiftUI.framework" />
+        <framework src="ActivityKit.framework" />
+        <hook src="hooks/ios/generate-swift-import.js" type="after_plugin_install" />
+    </platform>
+    <license>Apache 2.0 License</license>
+</plugin>

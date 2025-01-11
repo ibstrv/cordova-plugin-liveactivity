@@ -1,0 +1,17 @@
+{
+  "name": "LiveActivity",
+  "version": "1.0.0",
+  "description": "Live Activity for iOS Cordova Plugin",
+  "cordova": {
+    "id": "LiveActivity",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Ivan Bystrov",
+  "license": "Apache 2.0"
+}
